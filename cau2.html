@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let length = +prompt("Nhập độ dài mảng : ")
+let array = new Array(length)
+let index1 = +prompt("nhập vị trí muốn xóa :")
+for (let i = 0; i < array.length; i++) {
+array[i] = + prompt ( "phần tử thứ " + (i+1)  )
+}
+
+function  tryRemoveFromArray(arr,index) {
+    if(Number.isInteger(index) && index <= arr.length - 1) {
+      let newArray = []
+        for (let i = 0; i < arr.length; i++) {
+        if( i !== index) {
+            newArray.push(arr[i])
+        }
+        return newArray
+    }
+   return arr
+}
+
+alert(tryRemoveFromArray(array,index1))
+</script>
+</body>
+</html>

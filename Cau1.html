@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt("Nhập độ dài mảng : ")
+    let scores = new Array(length)
+    for (let i = 0; i < scores.length; i++) {
+         scores[i] = + prompt ( "nhập điểm thi của người thứ " + (i+1)  )
+    }
+
+    function scoreThree(arr){
+        let max1 = 0
+        let max2 = 0
+        let max3 = 0
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > max1) {
+                max1 = arr[i]
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > max2 && arr[i] < max1) {
+                max2 = arr[i]
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > max3 && arr[i] < max2) {
+                max3 = arr[i]
+            }
+        }
+        return max3
+    }
+
+    alert("Điểm cao thứ 3 là : " +scoreThree(scores))
+</script>
+</body>
+</html>

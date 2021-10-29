@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="class.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border: 1px solid black"></canvas>
+</body>
+</html>
+<script>
+    let canvas = document.getElementById('myCanvas')
+    let rectangle = new Rectangle(10,10,200,100,'#000000')
+    function draw() {
+        rectangle.render(canvas)
+    }
+    draw()
+</script>
