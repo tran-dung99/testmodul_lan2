@@ -6,21 +6,25 @@
 </head>
 <body>
 <script>
-    let strOne = "dung"
+    let strOne = "lam"
     let strTwo = "tranthithuydung"
 
     function checkString(str1,str2) {
+        let check = false
         for (let i = 0; i < str2.length; i++) {
-            if(str1[j] === str2[j+ i]) {
+            if(str2[i] === str1[0]) {
                 for (let j = 1; j < str1.length ; j++) {
-                    if(str1[j] === str2[j+ i]) {
-
+                    if(str1[j] !== str2[i + j]) {
+                            check = false
+                             break;
                     }
                 }
             }
+
         }
-        return false
+        return check
     }
+
  alert(checkString(strOne, strTwo))
 </script>
 </body>
